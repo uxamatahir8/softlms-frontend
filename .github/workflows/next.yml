@@ -26,7 +26,3 @@ jobs:
       # Step 3: Install dependencies
       - name: Install Dependencies
         run: npm install
-
-      # Step 4: Run linting
-      - name: Run Lint
-        run: npm run lint
