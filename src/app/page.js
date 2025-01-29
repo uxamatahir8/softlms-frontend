@@ -10,7 +10,7 @@ export default function Home() {
       try {
         const response = await Api.get('home');
         setData(response.data);
-      } catch (error) {
+      } catch (error) { 
         console.error("Error fetching data:", error);
       }
     };
@@ -19,12 +19,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      {data ? (
-        <pre>{JSON.stringify(data, null, 2)}</pre>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
+    <>
+      <div>
+        {data ? (
+          <pre>{JSON.stringify(data, null, 2)}</pre>
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
+    </>
   );
 }
